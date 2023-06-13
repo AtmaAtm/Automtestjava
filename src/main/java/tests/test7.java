@@ -22,28 +22,29 @@ public class test7 {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
         driver.get("https://rozetka.com.ua/ua/");
 
 
-        By input = By.xpath("/html/body/app-root/div/div/rz-header/rz-main-header/header/div/div/div/form/div/div/input");
-        By input1 = By.xpath("/html/body/app-root/div/div/rz-category/div/main/div[1]/div/h1");
-        By input2 = By.xpath("/html/body/app-root/div/div/rz-header/rz-main-header/header/div/div/a/picture/img");
+        By input = By.xpath("//*[@name='search']");
+        By input1 = By.xpath("//*[@class='catalog-heading ng-star-inserted']");
+        By input2 = By.xpath("//*[@alt='Rozetka Logo']");
         WebElement element = driver.findElement(input);
         element.click();
         element.sendKeys("iPhone", Keys.ENTER);
+
         element = driver.findElement(input1);
         String textFromRozetka = element.getText();
+
         element = driver.findElement(input2);
         element.click();
+
         element = driver.findElement(input);
         element.click();
         element.sendKeys(textFromRozetka, Keys.ENTER);
         driver.close();
-
-
 
     }
 }
