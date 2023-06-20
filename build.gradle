@@ -1,3 +1,5 @@
+import org.omg.IOP.Encoding
+
 plugins {
     id 'java'
 }
@@ -9,6 +11,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     testImplementation 'org.testng:testng:7.5'
 // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
@@ -16,6 +19,7 @@ dependencies {
 
     compileClasspath 'org.seleniumhq.selenium:selenium-api:3.141.59'
     compileClasspath 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
+    compileClasspath 'org.testng:testng:7.5'
 }
 
 test {

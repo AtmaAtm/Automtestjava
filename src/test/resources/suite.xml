@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Wiki" verbose="1" >
+    <test name="SearchWiki" preserve-order="true" >
+        <classes>
+            <class name="testsforYuriy.Test8Rozetka"></class>
+        </classes>
+    </test>
+
+</suite>
