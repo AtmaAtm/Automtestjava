@@ -2,8 +2,9 @@
 
 <suite name="Wiki" verbose="1" >
     <test name="SearchWiki" preserve-order="true" >
+        <parameter name="titleForCat" value="Cat"/>
         <classes>
-            <class name="testsforYuriy.Test8Rozetka"></class>
+            <class name="tests.TranslatorTest.testoncons"/>
         </classes>
     </test>
 
