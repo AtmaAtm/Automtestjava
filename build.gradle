@@ -2,6 +2,7 @@ import org.omg.IOP.Encoding
 
 plugins {
     id 'java'
+    id 'io.qameta.allure'version '2.9.6'
 }
 
 group 'org.example'
@@ -20,6 +21,16 @@ dependencies {
     compileClasspath 'org.seleniumhq.selenium:selenium-api:3.141.59'
     compileClasspath 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
     compileClasspath 'org.testng:testng:7.5'
+    testImplementation 'io.qameta.allure:allure-testng:2.13.1'
+    testImplementation 'io.qameta.allure:allure-commandline:2.13.1'
+    testImplementation 'io.qameta.allure:allure-assertj:2.13.1'
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.13.1'
+// https://mvnrepository.com/artifact/io.qameta.allure/allure-java-commons
+    testImplementation 'io.qameta.allure:allure-java-commons:2.13.1'
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    testImplementation 'org.aspectj:aspectjweaver:1.9.5'
+
+
 }
 
 test {
