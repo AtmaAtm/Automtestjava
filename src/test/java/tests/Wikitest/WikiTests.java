@@ -2,6 +2,7 @@ package tests.Wikitest;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tests.base.ConfigsWikiTests;
@@ -23,9 +24,30 @@ public class WikiTests {
         driver.get("https://www.wikipedia.org/");
     }
 
-    @Test
+    @Test (priority = 1)
     public void testSearchField(){
         ConfigsWikiTests.searchField("Ukraine");
 
     }
+
+    @Test (priority = 2)
+    public void testFlagPresence(){
+        ConfigsWikiTests.verifyFlag();
+    }
+
+    @Test (priority = 3)
+    public void newInputInSearch(){
+        ConfigsWikiTests.newInputOdesa();
+    }
+
+    @Test (priority = 4)
+    public void newTitleIstanbul (){
+        ConfigsWikiTests.setTwinTowns();
+    }
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
+    }
 }
+
+
